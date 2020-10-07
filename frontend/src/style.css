@@ -1,0 +1,83 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+.hero {
+    min-height: 750px;
+    background: url("hero.jpg") center center;
+    background-size: cover;
+    position: relative;
+}
+
+.navigation {
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+header {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    padding: 50px 0;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    position: relative;
+    width: 1170px;
+    margin: 0 auto;
+    -webkit-transition: padding 300ms ease-in-out;
+    transition: padding 300ms ease-in-out;
+}
+
+header nav {
+	display: inline-block;
+}
+header .logo {
+	color: white;
+	text-transform: uppercase;
+	display: inline-block;
+}
+header .logo h1 {
+	font-size: 24px;
+}
+header .logo span {
+	color: orange;
+}
+
+header ul {
+    margin: 0 0 0 75px;
+    padding: 0;
+}
+
+header ul li {
+	display: inline;
+	list-style-type: none;
+}
+
+header ul li a:hover {
+	transition: 300ms;
+    color: #FF5274;
+}
+header ul li a {
+    color: #fff;
+    padding-right: 25px;
+}
+header a {
+	text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.fixed {
+    position: fixed;
+    background-color: #232731;
+    z-index: 999;
+    width: 100%;
+}

@@ -39,6 +39,11 @@ class Header extends Component {
         )
         const userLink = (
             <Nav className="ml-auto" navbar>
+                {localStorage.usertoken ?
+                    <NavItem>
+                        <NavLink tag={Link} to="/users">Users</NavLink>
+                    </NavItem> : ''
+                }
                 <NavItem>
                     <NavLink tag={Link} to="/profile">Profile</NavLink>
                 </NavItem>
@@ -49,36 +54,34 @@ class Header extends Component {
         )
         return (
             <div>
-                <Navbar color="info" dark expand="md">
+                <Navbar color="warning" dark expand="md">
+                    <NavbarBrand href="/">
+                        <b className="logo-icon">
+                            <img height='50' width='50' src={'/image/box.png'} alt="homepage" className="dark-logo" />
+                        </b>
+                    </NavbarBrand>
                     <NavbarBrand tag={Link} to="/">Bloggg!</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
                             <NavItem>
+                                <NavLink tag={Link} to="/blog">Content</NavLink>
+                            </NavItem>
+                            <NavItem>
                                 <NavLink tag={Link} to="/about">About</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/blog">Blog</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/products">Products</NavLink>
                             </NavItem>
 
                             <NavItem>
-                                <NavLink tag={Link} to="/category">Category</NavLink>
+                                <NavLink tag={Link} to="/contact">Contact</NavLink>
                             </NavItem>
 
                             <NavItem>
                                 <NavLink tag={Link} to="/fileupload">Upload</NavLink>
                             </NavItem>
-                            
-                            
-                                {localStorage.usertoken?
-                                <NavItem>
-                                <NavLink tag={Link} to="/users">Users</NavLink>
-                            </NavItem> : ''
-                            }
-                           
+
+
+
+
                         </Nav>
 
                         {localStorage.usertoken ? userLink : loginRegLink}

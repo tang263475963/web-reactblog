@@ -22,7 +22,7 @@ const app = express();
 
 //db
 mongoose
-    .connect(process.env.DATBASE_CLOUD, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false })
+    .connect(process.env.DATABASE_CLOUD, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false })
     .then(() => console.log('DB Connected'))
     .catch(err => {
      console.log(err);
@@ -48,7 +48,7 @@ if (process.env.NODE_ENV === 'development') {
 
 //routes midlleware
 app.use('/api',userRoutes);
-app.use ('/api',usersRoutes);
+app.use('/api',usersRoutes);
 app.use('/api', productRoutes);
 app.use('/api', categoryRoutes);
 app.use('/api', uploadfileRoutes);

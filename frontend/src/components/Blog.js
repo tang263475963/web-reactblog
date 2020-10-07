@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import {
     Table, Col, Row, Form, FormGroup, Label, Input, Button,
-    Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle,
+    Card, Container, CardText, CardBody, CardTitle, CardSubtitle,
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
@@ -96,7 +96,14 @@ export default class Blog extends Component {
     render() {
         return (
             <div>
-                <Link to="/blogform">POST</Link>
+                <Container>
+                <a href="/blogform" className="btn btn-md m-t-30 btn-info-gradiant font-14">
+                <Button block={true} variant="contained" color="warning"  size="lg">
+                    TELL YOUR STORY !
+                </Button></a>
+                <h3>ลองเขียน live style ของคุณดูสิ</h3>
+                
+                </Container>
                 <Row>
                     {
                     this.state.blogs.map(B =>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { login } from './UserFunctions'
+import { Button } from 'reactstrap';
+
 class Login extends Component {
   constructor() {
     super()
@@ -55,12 +57,7 @@ class Login extends Component {
                   onChange={this.onChange}
                 />
               </div>
-              <button
-                type="submit"
-                className="btn btn-lg btn-primary btn-block"
-              >
-                Sign in
-              </button>
+              <Button outline color="warning" size="lg" block>Login !</Button>
             </form>
           </div>
         </div>

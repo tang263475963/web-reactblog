@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { register } from './UserFunctions'
+import { Button } from 'reactstrap';
 
 class Register extends Component {
   constructor() {
@@ -69,12 +70,7 @@ class Register extends Component {
                   onChange={this.onChange}
                 />
               </div>
-              <button
-                type="submit"
-                className="btn btn-lg btn-primary btn-block"
-              >
-                Register!
-              </button>
+              <Button outline color="warning" size="lg" block>Confirm !</Button>
             </form>
           </div>
         </div>
