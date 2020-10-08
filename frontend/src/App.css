@@ -1,5 +1,5 @@
 
-img{
+.img{
 width: 500px;
 height: 500px;
 object-fit: contain;
@@ -23,6 +23,7 @@ flex-direction: column;
 justify-content: space-between;
 font-size: 1rem;
 }
+
 
 
 

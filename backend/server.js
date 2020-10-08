@@ -10,8 +10,8 @@ require('dotenv').config();
 // bring routes
 const userRoutes = require('./routes/user');
 const usersRoutes = require ('./routes/users');
-const productRoutes = require('./routes/product');
-const categoryRoutes = require('./routes/category');
+//const productRoutes = require('./routes/product');
+//const categoryRoutes = require('./routes/category');
 const uploadfileRoutes = require('./routes/uploadfile');
 const blogRoutes = require('./routes/blog');
 //const authRoutes = require('./routes/auth');
@@ -49,8 +49,8 @@ if (process.env.NODE_ENV === 'development') {
 //routes midlleware
 app.use('/api',userRoutes);
 app.use('/api',usersRoutes);
-app.use('/api', productRoutes);
-app.use('/api', categoryRoutes);
+//app.use('/api', productRoutes);
+//app.use('/api', categoryRoutes);
 app.use('/api', uploadfileRoutes);
 app.use('/api', blogRoutes);
 //app.use('/api', authRoutes);

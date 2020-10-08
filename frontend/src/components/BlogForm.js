@@ -95,6 +95,7 @@ export default class BlogForm extends Component {
     render() {
         return (
             <div>
+                <hr/>
                 <Row>
                     <Col>
                         <Form onSubmit={(e) => this.submit(e, this.state.id)}>
