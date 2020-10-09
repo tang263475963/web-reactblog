@@ -20,6 +20,7 @@ import Contact from './components/Contact';
 function App() {
   return (
     <div >
+      
       <Header />
       <Container fluid ={true}>
       <Route path='/' exact={true} component={Home} />

@@ -24,6 +24,31 @@ justify-content: space-between;
 font-size: 1rem;
 }
 
+.p {
+    text-align: center;
+    color: black;
+}
+
+.padding{
+    text-align: center;
+    background-color: orange;
+    padding-top: 40px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    padding-left: 80px;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+.front{
+    font-family: "Times New Roman", Times, serif;
+}
+
+.background{
+    background-color: #FFCC99
+    ;
+    
+}
+
 
 
 

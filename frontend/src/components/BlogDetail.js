@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {
-    Table, Col, Row, Form, FormGroup, Label, Input, Button,
+    Badge, Col, Row, Form, FormGroup, Label, Input, Button,
     Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle,
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 export default class Blog extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -37,27 +37,18 @@ export default class Blog extends Component {
     render() {
         return (
             <div>
-                <Link to="/blogform">POST</Link>
-                <Row>
-                    {
+                {
                     this.state.blogs.map(B =>
-                        <Col md={3} key={B._id}> 
-                                <Card >
-                                {/* <CardImg top width="100%" src={B.photo}  /> */}
-                                <CardBody>
-                                    <CardTitle><Link to="/blog/{B._id}"> {B.title} </Link></CardTitle>
-                                    <CardSubtitle>{B.user}</CardSubtitle>
-                                    <CardText>{B.description}</CardText>
-                                    {/* 
-                                     <Button color="warning" onClick={(e) => this.edit(B._id)}>Edit</Button>{' '}
-                                     <Button color="danger" onClick={(e) => this.delete(B._id)} >Delete</Button> 
-                                    */}
-                                </CardBody>
-                            </Card>
-                    </Col>
-                     )
-                    }
-                </Row>
+                        <Row className="justify-content-center">
+                        <Col md="12" className="text-center" className="padding" key={B._id} >
+                            {B.photo}
+                            <h3>{B.title} <Badge color="dark">Blog</Badge>{' '}</h3>
+                            <h6>{B.description}</h6>
+                            <h4>{B.user}</h4>
+                        </Col>
+                        </Row>
+                    )
+                }
             </div>
         )
     }

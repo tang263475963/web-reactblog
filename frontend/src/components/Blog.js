@@ -97,31 +97,29 @@ export default class Blog extends Component {
         return (
             <div>
                 <Container>
-                <a href="/blogform" className="btn btn-md m-t-30 btn-info-gradiant font-14">
-                <Button block={true} variant="contained" color="warning"  size="lg">
-                    TELL YOUR STORY !
-                </Button></a>
-                <h3>ลองเขียน live style ของคุณดูสิ</h3>
-                
+                    <hr />
+                    <a href="/blogform" className="justify-content-center" className="front">
+                        <Button block={true} variant="contained" color="warning" size="lg" >
+                            TELL YOUR STORY !
+                        </Button>
+                    </a>
+                    <Col md="12" className="text-center front"  >
+                    <h3>ลองเขียน live style ของคุณดูสิ</h3>
+                    </Col>
+                    <hr />
                 </Container>
                 <Row>
                     {
-                    this.state.blogs.map(B =>
-                        <Col md={3} key={B._id}> 
+                        this.state.blogs.map(B =>
+                            <Col  className="front" lg="4" md="6" key={B._id}>
                                 <Card >
-                                {/* <CardImg top width="100%" src={B.photo}  /> */}
-                                <CardBody>
-                                    <CardTitle><Link to={'/blog/'+B._id}> {B.title} </Link></CardTitle>
-                                    <CardSubtitle>{B.user}</CardSubtitle>
-                                    <CardText>{B.description}</CardText>
-                                    {/* 
-                                     <Button color="warning" onClick={(e) => this.edit(B._id)}>Edit</Button>{' '}
-                                     <Button color="danger" onClick={(e) => this.delete(B._id)} >Delete</Button> 
-                                    */}
-                                </CardBody>
-                            </Card>
-                    </Col>
-                     )
+                                    <a href={'/blog/' + B._id}><img className="card-img-top" src={B.photo} alt="Hi" /></a>
+                                    <h5 className="font-medium m-t-30"><a href={'/blog/' + B._id} className="link">{B.title}</a></h5>
+                                    <p className="m-t-20">{B.description}</p>
+                                    <a href={'/blog/' + B._id} className="linking text-themecolor m-t-10">{B.user}<i className="ti-arrow-right"></i></a>
+                                </Card>
+                            </Col>
+                        )
                     }
                 </Row>
             </div>
