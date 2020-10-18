@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Row, Col, Container, Badge} from 'reactstrap';
 import axios from 'axios';
 
 function FileUpload() {
@@ -29,7 +30,18 @@ function FileUpload() {
     }
     return (
         <div>
-            <div className="file-upload">
+            <Container>
+                <hr/>
+                    <Row className="justify-content-center front">
+                        <Col md="7" className="text-center">
+                        <h3>รูปภาพ <Badge color="dark">Upload</Badge>{' '}</h3>
+                            <h2 className="title">หน้านี้มีไว้สำหรับทดสอบระบบการอัพรูปภาพ</h2>
+                            <h6 className="subtitle">*เว็บไซต์บางส่วนยังมีข้อผิดพลาดที่ยังแก้ไขไม่ได้ จึงต้องใช้การสมมติแทน*</h6>
+                        <hr/>                    
+                        </Col>
+                    </Row>
+                </Container>
+            <div className="file-upload front">
                 <input type="file" ref={el} onChange={handleChange} />                
                 <div className="progessBar" style={{ width: progress }}>
                     {progress}
@@ -40,6 +52,7 @@ function FileUpload() {
                 {/* displaying received image*/}
                 {data.path && <img src={data.path} alt={data.name} />}
             </div>
+            <hr/>
         </div>
     );
 }

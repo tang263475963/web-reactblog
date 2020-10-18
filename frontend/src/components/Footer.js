@@ -1,52 +1,56 @@
 import React, { Component } from 'react'
-import { Container, Row, Col } from 'reactstrap';
+import "./Footer.css"
 
-export default class Footer extends Component {
-    render() {
-        return (
-            <div className="footer4 b-t spacer">
-            <hr />
-        <Container>
-            <Row>
-                <Col lg="3" md="6" className="m-b-30">
-                    <h5 className="m-b-20">Address</h5>
-                    <p>กรุงเทพมหานคร </p>
-                </Col>
-                <Col lg="3" md="6" className="m-b-30">
-                    <h5 className="m-b-20">Phone</h5>
-                    <p>Reception : 099-249-4442 <br />Office : 099-249-4442</p>
-                </Col>
-                <Col lg="3" md="6" className="m-b-30">
-                    <h5 className="m-b-20">Email</h5>
-                    <p>Office :  <a href="https://mail.google.com/" className="link">tang263475963@gmail.com</a> <br />Site :  <a href="https://mail.google.com/" className="link">tang263475963@gmail.com</a></p>
-                </Col>
-                <Col lg="3" md="6">
-                    <h5 className="m-b-20">Social</h5>
-                    <div className="round-social light">
-                        <a href="#" className="link"><i className="fa fa-facebook"></i></a>
-                        <a href="#" className="link"><i className="fa fa-twitter"></i></a>
-                        <a href="#" className="link"><i className="fa fa-google-plus"></i></a>
-                        <a href="#" className="link"><i className="fa fa-youtube-play"></i></a>
-                        <a href="#" className="link"><i className="fa fa-instagram"></i></a>
+const Footer = () => {
+    return (
+        <div className="main-footer front">
+            <div className="container">
+                <div className="row">
+                    {/* Column1 */}
+                    <div className="col">
+                        <h4>Location</h4>
+                        <ul className="list-unstyled" >
+                            <li>94 RACHAPROROB RD. PHAYATHAI, RACHATEVI, BANGKOK. 10400</li>
+                            <li>TEL. 099-249-4442 </li>
+                            <a>E-MAIL: </a><a href={URL = 'https://www.google.com/intl/th/gmail/about/'} className ='a'>tang263475963@gmail.com</a>
+                            
+                        </ul>
                     </div>
-                </Col>
-            </Row>
-            <div className="f4-bottom-bar">
-                <Row>
-                    <Col md="12">
-                        <div className="d-flex font-14">
-                            <div className="m-t-10 m-b-10 copyright">All Rights Reserved by WrapPixel.</div>
-                            <div className="links ml-auto m-t-10 m-b-10">
-                                <a href="#" className="p-10 p-l-0">Terms of Use</a>
-                                <a href="#" className="p-10">Legal Disclaimer</a>
-                                <a href="#" className="p-10">Privacy Policy</a>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
+                    {/* Column2 */}
+                    <div>
+                        <h4>|-COMPONENT | </h4>
+                            <a href={'/blog/'} className ='a'>- Content</a><br/>
+                            <a href={'/about/'} className ='a'>- About</a><br/>
+                            <a href={'/contact/'} className ='a'>- Contact</a>
+                        
+                    </div>
+                     {/* Column3 */}
+                     <div>
+                        <h4></h4>
+                        <ul className="list-unstyled" > 
+                        </ul>
+                    </div>
+                     {/* Column3 */}
+                     <div>
+                        <h4> -CONTACT</h4>
+                        <ul className="list-unstyled" >
+                        <li>กาญจนา กาสี ปวส.2</li>
+                            <li>ตั้งปณิธาน จันทร์อยู่ ปวส.2</li>
+                            <li>คอมพิวเตอร์โปรแกรมเมอร์</li> 
+                        </ul>
+                    </div>
+                </div>
+                <hr/>
+                <div className="row">
+                    <p className="col-sm">
+                        WEB REACTBLOG ! | ALL Right reserved | WEB-BLOG
+                    </p>
+
+                </div>
             </div>
-        </Container>
-    </div>
-        )
-    }
+        </div>
+    )
 }
+
+export default Footer;
+

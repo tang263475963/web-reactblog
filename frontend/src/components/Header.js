@@ -39,11 +39,11 @@ class Header extends Component {
         )
         const userLink = (
             <Nav className="ml-auto" navbar>
-                {localStorage.usertoken ?
+                {/* {localStorage.usertoken ?
                     <NavItem>
                         <NavLink tag={Link} to="/users">Users</NavLink>
                     </NavItem> : ''
-                }
+                } */}
                 <NavItem>
                     <NavLink tag={Link} to="/profile">Profile</NavLink>
                 </NavItem>
@@ -54,7 +54,7 @@ class Header extends Component {
         )
         return (
             <div>
-                <Navbar color="warning" dark expand="md">
+                <Navbar color="warning" dark expand="md" className='front'>
                     <NavbarBrand href="/">
                         <b className="logo-icon">
                             <img height='50' width='50' src={'/image/box.png'} alt="homepage" className="dark-logo" />
@@ -64,9 +64,19 @@ class Header extends Component {
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
-                            <NavItem>
-                                <NavLink tag={Link} to="/blog">Content</NavLink>
-                            </NavItem>
+                            {localStorage.usertoken ?
+                                <NavItem>
+                                    <NavLink tag={Link} to="/blog">Content</NavLink>
+                                </NavItem>
+                                : ''
+                            }
+                            {localStorage.usertoken ?
+                                <NavItem>
+                                    <NavLink tag={Link} to="/fileupload">Upload</NavLink>
+                                </NavItem>
+                                : ''
+                            }
+
                             <NavItem>
                                 <NavLink tag={Link} to="/about">About</NavLink>
                             </NavItem>
@@ -75,9 +85,7 @@ class Header extends Component {
                                 <NavLink tag={Link} to="/contact">Contact</NavLink>
                             </NavItem>
 
-                            <NavItem>
-                                <NavLink tag={Link} to="/fileupload">Upload</NavLink>
-                            </NavItem>
+
 
 
 

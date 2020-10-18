@@ -19,25 +19,27 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <div >
-      
-      <Header />
-      <Container fluid ={true}>
-      <Route path='/' exact={true} component={Home} />
-      <Route path='/about' component={About} />
-      <Route path='/profile' component={Profile} />
-      <Route path='/users' component={Users} />
-      <Route path='/login' component={Login} />
-      <Route path='/register' component={Register} />
-      <Route path='/blog' component={Blog} />
-      <Route path='/contact' component={Contact} />
-      <Route path='/blogform' component={BlogForm} />
-      <Route path='/blog/:id' component={BlogDetail} />
-      <Route path='/fileupload' component={FileUpload} />
-     </Container>
-
-      <Footer />
-    </div>
+    <div className="page-container">
+      <div className="content-wrap">
+          <Header />
+          <Container fluid={true}>
+            <Route path='/' exact={true} component={Home} />
+            <Route path='/about' component={About} />
+            <Route path='/profile' component={Profile} />
+            <Route path='/users' component={Users} />
+            <Route path='/login' component={Login} />
+            <Route path='/register' component={Register} />
+            <Route path='/blog' component={Blog} />
+            <Route path='/contact' component={Contact} />
+            <Route path='/blogform' component={BlogForm} />
+            <Route path='/blog/:id' component={BlogDetail} />
+            <Route path='/fileupload' component={FileUpload} />
+          </Container>
+          </div>
+          <Footer />
+        
+      </div>
+    
   );
 }
 

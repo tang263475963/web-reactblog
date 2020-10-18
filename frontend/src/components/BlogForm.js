@@ -87,20 +87,23 @@ export default class BlogForm extends Component {
                     description: res.data.description,
                     photo: res.data.photo,
                     user: res.data.user
-                })
+                }) 
             })
     }
     
 
     render() {
         return (
-            <div>
+            <div className="front"> 
+            <br/>
+            <h1>พิมพ์ข้อความของคุณ ได้เลย!</h1>
+            <p>*สามารถระบุ"ชื่อผู้ใช้"ที่คุณต้องการได้ตามความต้องการ*</p>
                 <hr/>
                 <Row>
                     <Col>
                         <Form onSubmit={(e) => this.submit(e, this.state.id)}>
                             <FormGroup row>
-                                <Label md={2}>Title</Label>
+                                <Label md={2}>หัวข้อ</Label>
                                 <Col md={10}>
                                     <Input type="text" onChange={(e) => this.titlechange(e)} value={this.state.title} />
                                 </Col>
@@ -125,12 +128,13 @@ export default class BlogForm extends Component {
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={{ size: 10, offset: 2 }}>
-                                    <Button color="success">บันทึกข้อมูล</Button>
+                                    <Button  outline color="warning" size="lg">บันทึกข้อมูล</Button>
                                 </Col>
                             </FormGroup>
                         </Form>
                     </Col>
                 </Row>
+                <hr/>
             </div>
         )
     }

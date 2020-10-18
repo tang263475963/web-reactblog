@@ -6,6 +6,8 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
+import img1 from '../images/big/img1.jpg'
+
 export default class Blog extends Component {
     constructor(props) {
         super(props);
@@ -109,19 +111,33 @@ export default class Blog extends Component {
                     <hr />
                 </Container>
                 <Row>
+                    
+                            <Col  className="front" lg="4" md="6" >
+                                <Card >
+                                    <a href={'/blog/'}><img className="card-img-top" src={img1} alt="Hi" /></a>
+                                    <h5 className="font-medium m-t-30"><a href={'/blog/'}  className ='b'>กรุงเทพชีวิตดี ๆ ที่ลงตัว</a></h5>
+                                    <p className="m-t-20">ชีวิตที่สะดวกสบายบางที่ก็ไม่จำเป็นต้องยึดติดสิ่ง</p>
+                                    <a href={'/blog/'} className="linking text-themecolor m-t-10 b">ชายผู้น่าเบื่อ<i className="ti-arrow-right "></i></a>
+                                </Card>
+                            </Col>
+                        
+                    
+                
+                
                     {
                         this.state.blogs.map(B =>
                             <Col  className="front" lg="4" md="6" key={B._id}>
                                 <Card >
-                                    <a href={'/blog/' + B._id}><img className="card-img-top" src={B.photo} alt="Hi" /></a>
-                                    <h5 className="font-medium m-t-30"><a href={'/blog/' + B._id} className="link">{B.title}</a></h5>
+                                    <a href={'/blog/' + B._id}><img className="card-img-top" src={img1} alt="Hi" /></a>
+                                    <h5 className="font-medium m-t-30"><a href={'/blog/' + B._id} className ='b'>{B.title}</a></h5>
                                     <p className="m-t-20">{B.description}</p>
-                                    <a href={'/blog/' + B._id} className="linking text-themecolor m-t-10">{B.user}<i className="ti-arrow-right"></i></a>
+                                    <a href={'/blog/' + B._id} className="linking text-themecolor m-t-10 b">{B.user}<i className="ti-arrow-right"></i></a>
                                 </Card>
                             </Col>
                         )
                     }
                 </Row>
+                <hr/>
             </div>
         )
     }

@@ -16,7 +16,7 @@ router.get('/blog/:id', (req, res) => {
 })
 
 router.delete('/blog/:id', async (req, res) => {
-    await Product.findByIdAndDelete(req.params.id);
+    await Blog.findByIdAndDelete(req.params.id);
     res.json({ 'message': 'Deleted' });
 })
 

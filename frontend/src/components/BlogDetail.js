@@ -39,7 +39,7 @@ export default class Blog extends Component {
             <div>
                 {
                     this.state.blogs.map(B =>
-                        <Row className="justify-content-center">
+                        <Row className="justify-content-center front">
                         <Col md="12" className="text-center" className="padding" key={B._id} >
                             {B.photo}
                             <h3>{B.title} <Badge color="dark">Blog</Badge>{' '}</h3>

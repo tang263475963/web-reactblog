@@ -31,7 +31,7 @@ class Register extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="container front">
         <div className="row">
           <div className="col-md-6 mt-5 mx-auto">
             <form noValidate onSubmit={this.onSubmit}>
@@ -72,6 +72,10 @@ class Register extends Component {
               </div>
               <Button outline color="warning" size="lg" block>Confirm !</Button>
             </form>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ object-fit: contain;
 .progessBar{
 height: 1rem;
 width: 0%;
-background-color: rgb(68, 212, 231);
+background-color: rgb(255, 255, 255);
 color: white;
 padding:2px
 }
@@ -29,6 +29,14 @@ font-size: 1rem;
     color: black;
 }
 
+.a{
+    color: rgb(255, 255, 255);
+}
+
+.b{
+    color: rgb(0, 0, 0);
+}
+
 .padding{
     text-align: center;
     background-color: orange;
@@ -36,19 +44,28 @@ font-size: 1rem;
     padding-right: 30px;
     padding-bottom: 40px;
     padding-left: 80px;
-    font-family: "Times New Roman", Times, serif;
   }
 
 .front{
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Athiti', sans-serif;
 }
 
+
+
 .background{
-    background-color: #FFCC99
+    background-color: #ffffff
     ;
     
 }
 
+.page-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
+.content-wrap{
+    flex: 1;
+}
 
 

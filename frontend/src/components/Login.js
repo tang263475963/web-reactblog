@@ -30,11 +30,11 @@ class Login extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="container front">
         <div className="row">
           <div className="col-md-6 mt-5 mx-auto">
             <form noValidate onSubmit={this.onSubmit}>
-              <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
+              <h1 className="h3 mb-3 font-weight-normal">Please sign in to get started.</h1>
               <div className="form-group">
                 <label htmlFor="email">Email address</label>
                 <input
@@ -59,6 +59,12 @@ class Login extends Component {
               </div>
               <Button outline color="warning" size="lg" block>Login !</Button>
             </form>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
           </div>
         </div>
       </div>
